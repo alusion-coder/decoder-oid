@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resposta de OIDs</title>
+    <link rel="stylesheet" href="calcular.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Resposta de OIDs</h1>
+        <p class="subtitle">Certificado Digital Brasileiro</p>
+
+        <form id="oidForm" method="POST">
+            <div class="form-group">
+                <label for="oid_2_16_76_1_3_1">OID 2.16.76.1.3.1 (Dados de Pessoa Física):</label>
+                <input type="text" id="oid_2_16_76_1_3_1" name="oid_2_16_76_1_3_1" placeholder="Insira os dados ou valores hex">
+            </div>
+
+            <div class="form-group">
+                <label for="oid_2_16_76_1_3_2">OID 2.16.76.1.3.2 (Nome da Pessoa Jurídica/Responsável):</label>
+                <input type="text" id="oid_2_16_76_1_3_2" name="oid_2_16_76_1_3_2" placeholder="Insira os dados ou valores hex">
+            </div>
+
+            <div class="form-group">
+                <label for="oid_2_16_76_1_3_3">OID 2.16.76.1.3.3 (CNPJ):</label>
+                <input type="text" id="oid_2_16_76_1_3_3" name="oid_2_16_76_1_3_3" placeholder="Insira os dados ou valores hex">
+            </div>
+
+            <div class="form-group">
+                <label for="oid_2_16_76_1_3_4">OID 2.16.76.1.3.4 (Dados da Pessoa Jurídica):</label>
+                <input type="text" id="oid_2_16_76_1_3_4" name="oid_2_16_76_1_3_4" placeholder="Insira os dados ou valores hex">
+            </div>
+
+            <div class="form-group">
+                <label for="oid_2_16_76_1_3_5">OID 2.16.76.1.3.5 (Título de Eleitor):</label>
+                <input type="text" id="oid_2_16_76_1_3_5" name="oid_2_16_76_1_3_5" placeholder="Insira os dados ou valores hex">
+            </div>
+
+            <div class="form-group">
+                <label for="oid_2_16_76_1_3_6">OID 2.16.76.1.3.6 (CEI Pessoa Física):</label>
+                <input type="text" id="oid_2_16_76_1_3_6" name="oid_2_16_76_1_3_6" placeholder="Insira os dados ou valores hex">
+            </div>
+
+            <div class="form-group">
+                <label for="oid_2_16_76_1_3_7">OID 2.16.76.1.3.7 (CEI Pessoa Jurídica):</label>
+                <input type="text" id="oid_2_16_76_1_3_7" name="oid_2_16_76_1_3_7" placeholder="Insira os dados ou valores hex">
+            </div>
+
+            <div class="form-group">
+                <label for="oid_2_16_76_1_3_8">OID 2.16.76.1.3.8 (Nome Social CNPJ):</label>
+                <input type="text" id="oid_2_16_76_1_3_8" name="oid_2_16_76_1_3_8" placeholder="Insira os dados ou valores hex">
+            </div>
+
+            <button type="submit" class="btn-submit">Processar Dados</button>
+            <button type="reset" class="btn-reset">Limpar Formulário</button>
+        </form>
+
+        <table id="resultsTable" style="display: none; margin-top: 30px;">
+            <thead>
+                <tr>
+                    <th style="width: 12%;">OID</th>
+                    <th style="width: 18%;">Nome Técnico</th>
+                    <th style="width: 50%;">Conteúdo</th>
+                    <th style="width: 20%;">Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="oid-code">2.16.76.1.3.1</span></td>
+                    <td class="tech-name">Dados de Pessoa Física</td>
+                    <td class="description">Data de nascimento, CPF, PIS/PASEP/CI, RG</td>
+                    <td class="result" id="result_oid_2_16_76_1_3_1"></td>
+                </tr>
+                <tr>
+                    <td><span class="oid-code">2.16.76.1.3.2</span></td>
+                    <td class="tech-name">Nome da Pessoa Jurídica/Responsável</td>
+                    <td class="description">Nome da pessoa responsável pelo certificado</td>
+                    <td class="result" id="result_oid_2_16_76_1_3_2"></td>
+                </tr>
+                <tr>
+                    <td><span class="oid-code">2.16.76.1.3.3</span></td>
+                    <td class="tech-name">CNPJ</td>
+                    <td class="description">Cadastro Nacional da Pessoa Jurídica</td>
+                    <td class="result" id="result_oid_2_16_76_1_3_3"></td>
+                </tr>
+                <tr>
+                    <td><span class="oid-code">2.16.76.1.3.4</span></td>
+                    <td class="tech-name">Dados da Pessoa Jurídica</td>
+                    <td class="description">Data de nascimento, CPF, NIS/PIS/PASEP/CI, RG, siglas e UF</td>
+                    <td class="result" id="result_oid_2_16_76_1_3_4"></td>
+                </tr>
+                <tr>
+                    <td><span class="oid-code">2.16.76.1.3.5</span></td>
+                    <td class="tech-name">Título de Eleitor</td>
+                    <td class="description">Inscrição eleitoral, zona, seção, município e UF</td>
+                    <td class="result" id="result_oid_2_16_76_1_3_5"></td>
+                </tr>
+                <tr>
+                    <td><span class="oid-code">2.16.76.1.3.6</span></td>
+                    <td class="tech-name">CEI Pessoa Física</td>
+                    <td class="description">Cadastro Específico do INSS para pessoas físicas</td>
+                    <td class="result" id="result_oid_2_16_76_1_3_6"></td>
+                </tr>
+                <tr>
+                    <td><span class="oid-code">2.16.76.1.3.7</span></td>
+                    <td class="tech-name">CEI Pessoa Jurídica</td>
+                    <td class="description">Cadastro Específico do INSS para pessoas jurídicas</td>
+                    <td class="result" id="result_oid_2_16_76_1_3_7"></td>
+                </tr>
+                <tr>
+                    <td><span class="oid-code">2.16.76.1.3.8</span></td>
+                    <td class="tech-name">Nome Social CNPJ</td>
+                    <td class="description">Razão social da pessoa jurídica</td>
+                    <td class="result" id="result_oid_2_16_76_1_3_8"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="calcular.js"></script>
+</body>
+</html>
