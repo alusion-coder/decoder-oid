@@ -57,7 +57,6 @@ Este formulário permite:
 
 - ITI — *Atribuição de OID na ICP-Brasil (DOC-ICP-04.01)*
 - Receita Federal do Brasil — *Leiaute dos Certificados Digitais da SRF*
-- [oidref.com — Árvore de OIDs ICP-Brasil](https://oidref.com/2.16.76.1.3)
 - Portal de Dados Abertos do ITI — [dadosabertos.iti.gov.br/oid](https://dadosabertos.iti.gov.br/oid)
 
 ## Tecnologias
@@ -71,4 +70,4 @@ Este projeto é fornecido "como está", para fins educacionais e de suporte téc
 
 ## Autor
 
-**Micael William** — Suporte Técnico em Certificados Digitais e Sistemas Fiscais (SPED/NFC-e)
+**Suporte** — Suporte Técnico.
