@@ -30,7 +30,7 @@ Este formulário permite:
 
 > Fonte: Documento **DOC-ICP-04.01 — Atribuição de OID na ICP-Brasil**, publicado pelo ITI, e leiaute de certificados digitais da Receita Federal do Brasil (RFB).
 
-## Estrutura de Arquivos
+## Estrutura
 
 ```
 .
@@ -43,8 +43,8 @@ Este formulário permite:
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   cd seu-repositorio
+   git clone https://github.com/alusion-coder/decoder-oid
+   cd decoder-oid
    ```
 2. Abra o arquivo `index.html` em qualquer navegador (Chrome, Brave, Opera, etc.), ou hospede em um servidor estático (GitHub Pages, Netlify, etc.).
 3. Preencha os campos correspondentes a cada OID com os dados extraídos do certificado digital.
@@ -73,4 +73,4 @@ Este projeto é fornecido "como está", para fins educacionais e de suporte téc
 
 ## Autor
 
-**Suporte** — Suporte Técnico.
+**Suporte** — Suporte Técnico - Alusion.
